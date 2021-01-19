@@ -1,0 +1,9 @@
+<%-include("./partials/header.ejs")%>
+    <form action="/addRecipeList" class="addRecipeForm" method="post">
+        <h1 class='recipeHead'>Add Recipes Here</h1>
+        <div class="addRecipe">
+            <input type="text" name="recipeTitle" placeholder="Recipe Name">
+            <textarea name="recipe" cols="6" rows="4" placeholder="Recipe list"></textarea>
+        </div>
+        <button type="submit" class="btn btn-danger addRecipeBtn">Add</button>
+    </form>

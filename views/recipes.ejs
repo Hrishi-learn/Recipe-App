@@ -1,0 +1,24 @@
+<%-include("./partials/header.ejs")%>
+    <div class="container">
+        <h1>My recipes</h1>
+        <div class="recipeItems">
+            <%recipes.forEach(recipe=>{%>
+                <div class="card-recipe">
+                    <h5 class="card-title">
+                        <%=recipe.title%>
+                    </h5>
+                    <p class="card-text">
+                        <%=recipe.recipe%>
+                    </p>
+                    <form action="/delete" method="post">
+                        <button type="submit" class="btn btn-primary" name="delete" value='<%=recipe._id%>'><i class="fas fa-trash"></i></button>
+                    </form>
+                </div>
+                <%})%>
+        </div>
+        <div class="addBtn">
+            <a href="/addRecipe" role="button" class="btn btn-dark" > Add Recipes</a>
+        </div>
+    </div>
+
+    <%-include("./partials/footer.ejs")%>

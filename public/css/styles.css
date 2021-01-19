@@ -1,0 +1,220 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Sniglet&display=swap');
+
+
+/* Navbar design */
+.navbar{
+    background-color: rgb(255, 196, 0);
+}
+.app-name{
+    font-family: 'Sniglet', cursive;
+    color:#fff;
+    font-size: 1.45rem;
+    margin: 0px 10px;
+}
+.app-name:hover{
+    text-decoration: none;
+    color: blanchedalmond;
+}
+.navbar ul li a{
+    font-family: 'Comfortaa', cursive;
+    color:whitesmoke;
+    margin:0px 10px;
+}
+.anchor{
+text-decoration: underline;
+}
+
+/* Search bar design */
+
+.search-form{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 40px;
+    margin-left: 25px;
+}
+.search-form button{
+    color: blanchedalmond;
+}
+.search-input{
+    width: 40%;
+    border-radius: 7px;
+    border:1px solid yellow;
+    padding: 5px 8px;
+    margin-right: 7px;
+}
+
+/* recipe card design */
+.card-img{
+    width: 100px !important;
+}
+.card{
+    height: auto !important;
+    width:30rem !important;
+    padding: 0px;
+    margin: 10px 20px;
+}
+.card ul li{
+    list-style: none;
+    font-size: 0.95rem !important;
+}
+.recipe{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+/* My recipes design */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    margin-bottom: 60px;
+}
+.container h1{
+    font-family: 'Comfortaa', cursive;
+    text-align:center;
+    margin:10px 0px;
+}
+.showRecipes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px;
+}
+.showRecipes h1{
+    font-family: 'Yeon Sung', cursive;
+    font-size: 3rem;
+}
+.recipeHead{
+    font-family: 'Yeon Sung', cursive;
+    text-align: center;
+}
+.recipeItems{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-recipe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(138, 132, 132, 0.596);
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.card-recipe:hover{
+    border: 1px solid rgba(92, 91, 91, 0.897);
+}
+.addBtn{
+    /* width: 30%; */
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/* addRecipe page design */
+
+.addRecipe{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.addRecipe input{
+    width: auto;
+    margin: 20px 15px 10px 15px;
+    border-radius: 7px;
+    padding: 6px;
+}
+.addRecipe textarea{
+    width: auto;
+    margin: 7px 15px;
+    border-radius: 7px;
+    padding: 6px;
+}
+.addRecipeBtn{
+    margin-left: 25px;
+}
+.addRecipeForm{
+    margin:25px;
+    padding:20px;
+}
+
+
+
+/* footer design */
+
+footer{
+    margin-top: 20px;
+    height: 250px;
+    background-color: rgb(4 6 25 / 82%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:20px;
+}
+footer p{
+    text-align: center;
+    margin: 10px;
+    font-family: 'Sniglet', cursive;
+    color: rgba(255, 255, 255, 0.541);
+}
+.contentContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.socialContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px;
+    color: white;
+}
+.socialContainer i{
+    margin:5px 9px ;
+}
+.first{
+    margin: 10px 45px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+.first h3{
+    text-align: center;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+}
+.first ul li{
+    list-style: none;
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.9rem;
+    
+}
+.first ul li:hover{
+    color:blanchedalmond;
+}
+
+
+/* Responsive design */
+@media(max-width:825px){
+    footer{
+        height: 350px;
+    }
+}
+@media(max-width:440px){
+    .first{
+        margin: 5px 15px;
+    }
+}
+

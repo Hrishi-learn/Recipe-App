@@ -1,0 +1,27 @@
+<%-include('./partials/header.ejs')%>
+    <div class="container">
+        <form action="/search" method="post" class="search-form">
+            <input class='search-input' type="text" name='search' placeholder="search for recipes" autocomplete="off">
+            <button class="btn btn-warning btn-md" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+
+        <div class="recipeContainer">
+            <div class="recipe">
+                <%recipes.forEach(item=>{%>
+                    <div class="card" >
+                        <div class="card-body">
+                          <h5 class="card-title"><%=item.recipe.label%></h5>
+                          <img src="<%=item.recipe.image%>" class='card-img' alt="dish">
+                          <ul>
+                              <%item.recipe.ingredients.forEach(ingredient=>{%>
+                                  <li><%=ingredient.text%></li>
+                              <%})%>
+                          </ul>
+                        </div>
+                      </div>
+                <%})%>
+            </div>
+        </div>
+    </div>
+
+    <%-include("./partials/footer.ejs")%>
