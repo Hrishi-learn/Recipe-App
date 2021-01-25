@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const axios = require('axios');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -10,7 +10,11 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 //connect mongoose
-mongoose.connect('mongodb://localhost:27017/recipeDB');
+mongoose.connect('mongodb+srv://admin:bjNVwtdkMC7M45ZT@cluster0.ywyse.mongodb.net/recipeDB?retryWrites=true&w=majority',{
+    useNewUrlParser:true,
+    useCreateIndex:true,
+    useUnifiedTopology:true,
+});
 
 const recipeSchema = mongoose.Schema({
     title:String,
@@ -93,3 +97,4 @@ app.listen(port, () => {
     console.log('server started');
 })
 
+//bjNVwtdkMC7M45ZT
