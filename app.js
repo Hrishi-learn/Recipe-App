@@ -4,6 +4,7 @@ const app = express();
 const axios = require('axios');
 const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
+require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -25,9 +26,9 @@ const Recipe = mongoose.model("Recipe",recipeSchema);
 
 app.get('/', (req, res) => {
     const defaultQuery = "chicken";
-    const apiKey = "2ee66e346e7e5328767e375627d5affd"
-    const app_id = "70331b69"
-    const url = `https://api.edamam.com/search?q=${defaultQuery}&app_id=${app_id}&app_key=${apiKey}`
+    const apiKey = process.env.API_KEY;
+    const app_id = "70331b69";
+    const url = `https://api.edamam.com/search?q=${defaultQuery}&app_id=${app_id}&app_key=${apiKey}`;
 
     axios.get(url).then(response=>{
         const recipes = response.data.hits;
